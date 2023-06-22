@@ -32,8 +32,7 @@ function App() {
     const auth = getAuth();
     signInWithPopup(auth, provider)
       .then((result) => {
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        setJwt(credential.idToken);
+        setJwt(result["_tokenResponse"]["idToken"]);
       })
       .catch((error) => {
         console.log(error);
@@ -44,8 +43,6 @@ function App() {
     event.preventDefault();
     var username = event.target[0].value;
     var password = event.target[1].value;
-
-    console.log(process.env.REACT_APP_ADMIN_USERNAME, password);
 
     if (
       username == process.env.REACT_APP_ADMIN_USERNAME &&
