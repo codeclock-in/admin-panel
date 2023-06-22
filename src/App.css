@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .App-logo {
@@ -27,6 +29,25 @@
 .App-link {
   color: #61dafb;
 }
+
+
+button{
+  display: block;
+  text-align: center;
+  margin: 12px auto;
+}
+/* 
+form{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+form center{
+  padding-bottom: 4px;
+} */
+
 
 @keyframes App-logo-spin {
   from {
